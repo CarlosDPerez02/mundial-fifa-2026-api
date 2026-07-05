@@ -7,7 +7,7 @@ SQLAlchemy,
 PostgreSQL,
 Docker,
 Uvicorn,
-Pydantic,
+Pydantic.
 
 
 Funcionalidades:
