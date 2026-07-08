@@ -36,7 +36,25 @@ from database.db import engine, Base
 import models.jugador_db
 import models.selecciones_db
 
-app = FastAPI()
+app = FastAPI(
+    title="MUNDIAL FIFA 2026 API",
+    description="""
+API REST desarrollada con FastAPI para la gestión de jugadores del Mundial FIFA 2026.
+
+Características:
+- Registro de jugadores
+- Consulta por ID y nombre
+- Actualización de datos
+- Gestión de goles y asistencias
+- Gestión de selecciones
+- Eliminación de jugadores
+""",
+    version="1.0.0",
+    contact={
+        "name": "Carlos Pérez",
+        "url": "https://github.com/CarlosDPerez02/mundial-fifa-2026-api",
+    },
+)
 
 app.include_router(router)
 app.include_router(modificacion_router)

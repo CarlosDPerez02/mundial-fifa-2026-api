@@ -15,7 +15,7 @@ def buscar_jugador_nombre(
     db: Session = Depends(get_db)
 ):
     jugador = db.query(JugadorDB).filter(
-        JugadorDB.nombre.ilike(f"{jugador_nombre}%")
+        JugadorDB.nombre.ilike(f"%{jugador_nombre}%")
     ).first()
     
     if not jugador:
